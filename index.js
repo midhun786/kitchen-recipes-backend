@@ -8,7 +8,7 @@ var nodemailer = require("nodemailer");
 var randomstring = require("randomstring");
 const dotenv = require("dotenv").config();
 const mongoClient = mongodb.MongoClient;
-const URL = process.env.DB_URL;
+const URL = process.env.DB_URL
 const DB = process.env.DB;
 
 //middleware
@@ -270,4 +270,8 @@ app.put("/editrecipe/:id", async function (req, res) {
 });
 
 
-app.listen(5000);
+// app.listen(5000);
+const PORT = (process.env.PORT || 5000);
+app.listen(PORT, () => {
+    console.log('Port is Running on ' + PORT);
+});
