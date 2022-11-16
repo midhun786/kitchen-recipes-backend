@@ -129,7 +129,7 @@ app.post("/resetpassword", async function (req, res) {
 
       var mailOptions = {
         from: process.env.FROM,
-        to: email,
+        to: mailid,
         subject: "Password Reset",
         text: `Your Random text is ${rString}. Click the link to reset password ${link}`,
         html: `<h2> Your Random text is ${rString}. Click the link to reset password ${link}</h2>`,
